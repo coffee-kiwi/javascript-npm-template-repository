@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "start": "webpack serve --open --config webpack.dev.js",
-    "installWebpack": "npm install -save-dev webpack webpack-cli &&--save-dev html-webpack-plugin && --save-dev style-loader css-loader && --save-dev html-loader && --save-dev webpack-dev-server"
+    "installWebpack": "npm install webpack webpack-cli html-webpack-plugin style-loader css-loader html-loader webpack-dev-server --save-dev"
+
   },
   "keywords": [],
   "author": "",
