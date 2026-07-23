@@ -1,30 +1,30 @@
- import path from 'node:path';
- import { fileURLToPath } from 'node:url';
- import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
- const __filename = fileURLToPath(import.meta.url);
- const __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
- export default {
-   entry: {
-     app: './src/index.js',
-   },
-   plugins: [
-     new HtmlWebpackPlugin({
-       title: 'Production',
-       template: "./src/template.html",
-     }),
-   ],
-   devtool: "eval-source-map",
-    devServer: {
+export default {
+  entry: {
+    app: "./src/index.js",
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Production",
+      template: "./src/template.html",
+    }),
+  ],
+  devtool: "eval-source-map",
+  devServer: {
     watchFiles: ["./src/template.html"],
   },
-   output: {
-     filename: 'main.bundle.js',
-     path: path.resolve(__dirname, 'dist'),
-     clean: true,
-   },
-   module: {
+  output: {
+    filename: "main.bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    clean: true,
+  },
+  module: {
     rules: [
       {
         test: /\.css$/i,
@@ -40,4 +40,4 @@
       },
     ],
   },
- };
+};
